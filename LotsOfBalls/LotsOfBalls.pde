@@ -1,21 +1,29 @@
 //declare variables
 float x, y, velX, velY, diam;
 float x2, y2, velX2, velY2, diam2;
+int count = 2;
 void setup() {
   //set size of canvas
   size(800, 600);
 
   //initialize variables
-  x = width/2;
-  x2= width/4;
-  y = height/2;
-  y2= height/4;
-  diam = 80;
-  diam2= 80;
-  velX = 5;
-  velX2= 6;
-  velY = 5;
-  velY2= 6;
+float[] x= new float[count];
+float[] y= new float[count];
+float[] velX= new float[count];
+float[] velY= new float[count];
+float[] diam = {3-,80};
+void setup() {
+  //set size of canvas
+  size(800, 600);
+   x[0] = width/2;
+ x[1] = width/4;
+ y[0] = height/2;
+  y[1] = height*.8;
+ velX[0] = random(-5, 5);
+ velX[1] = random(-1, 1);
+velY[0] = random(-5, 5);
+velY[1] = random(-10, 10);
+ }
 }
 
 void draw() {
@@ -23,7 +31,7 @@ void draw() {
   background(0);
 
   //draw ball
-  ellipse(x, y, diam, diam);
+  ellipse(x[1], y[1], diam[1], diam[1]);
 
   //add velocity to position
   x += velX;
