@@ -1,4 +1,4 @@
-int count=30;
+int count=100;
 float[] x = new float [count];
 float[] y = new float[count];
 float[] velX = new float[count];
@@ -10,9 +10,9 @@ float[] diam = new float[count];
   while (i < count) {
     x[i] = random(width);
     y[i] = random(height);
-    velX[i] = random(-5, 5);
-    velY[i] = random(-5, 5);
-    diam[i] = 10 + i;
+    velX[i] = random(-5, 3);
+    velY[i] = random(-5, 3);
+    diam[i] = 5+i;
     i++;
   }
  }
@@ -20,7 +20,7 @@ float[] diam = new float[count];
 void draw(){
 //draw background to cover previous frame
    background(0);
-   fill(random(255),random(255),random(255));
+  
   int i = 0;
   while (i < count) {
     //draw ball
