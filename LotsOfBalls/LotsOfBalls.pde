@@ -41,6 +41,7 @@ void draw(){
       velX[i] = abs(velX[i]);     //if the ball hits the left wall, assign x velocity the positive version of itself
     }
 
+<<<<<<< HEAD
     if (y[i] + diam[i]/2 >= height) {
       velY[i] = -abs(velY[i]);// if the ball hits the bottom wall, assign y velocity the negative version of itself
     } else if (y[i] - diam[i]/2 <= 0) {
@@ -49,3 +50,17 @@ void draw(){
     i++;
    }
 }
+=======
+  //bounce ball if it hits walls
+  if (x + diam/2 >= width) {
+    velX = -abs(velX);    //if the ball hits the right wall, assign x velocity the negative version of itself
+  } else if (x - diam/2 <= 0) {
+    velX = abs(velX);     //if the ball hits the left wall, assign x velocity the positive version of itself
+  }
+  if (y + diam/2 >= height) {
+    velY = -abs(velY);
+  } else if (y - diam/2 <= 0) {
+    velY = abs(velY);
+  }
+}
+>>>>>>> refs/heads/Creating-arrays
